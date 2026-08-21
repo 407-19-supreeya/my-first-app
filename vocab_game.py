@@ -88,10 +88,6 @@ ans2 = st.text_input(
      "ข้อ 2: Cats love to eat `f _ s h` . 🐟",
      value=st.session_state.ans2_val,
 )
-
-st.session_state.ans1_val = ans1
-st.session_state.ans2_val = ans2
-
 ans3 = st.text_input(
      "ข้อ 3: An `w _ t e _ _ e l _ n` green outside,red inside. 🍉",
      value=st.session_state.ans3_val,
@@ -99,6 +95,12 @@ ans3 = st.text_input(
 ans4 = st.text_input(
      "ข้อ 4: green and creamy `_ v o _ a _ o` . 🥑",
      value=st.session_state.ans4_val,
+)
+st.session_state.ans1_val = ans1
+st.session_state.ans2_val = ans2
+st.session_state.ans3_val = ans3
+st.session_state.ans4_val = ans4
+
   
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("ส่งคำตอบ"):
